@@ -7,8 +7,8 @@ export default function VerificationResult({ verification }) {
   return (
     <div
       className={[
-        "rounded border p-5",
-        verified ? "border-signal-ok/40 bg-signal-ok/[0.04]" : "border-signal-bad/40 bg-signal-bad/[0.04]",
+        "rounded-[3px] border p-5 shadow-[inset_1px_1px_0_rgba(255,255,255,0.08),inset_-1px_-1px_0_rgba(0,0,0,0.2)]",
+        verified ? "border-signal-ok/60 bg-signal-ok/10" : "border-signal-bad/60 bg-signal-bad/10",
       ].join(" ")}
     >
       <p className="font-display text-sm text-parchment/60">Integrity check</p>

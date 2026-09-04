@@ -54,12 +54,12 @@ export default function StatusBar({ status, account }) {
 
 function Pill({ ok, label, detail }) {
   return (
-    <div className="rounded border hairline bg-ink-800/40 px-3 py-2.5">
-      <p className="flex items-center gap-2 font-display text-xs text-parchment/70">
+    <div className="panel-surface px-3.5 py-3">
+      <p className="flex items-center gap-2 font-display text-[11px] uppercase tracking-[0.16em] text-parchment/70">
         <span className={ok ? "text-signal-ok" : "text-signal-warn"}>{ok ? "●" : "○"}</span>
         {label}
       </p>
-      <p className="mt-1 truncate font-mono text-[11px] text-parchment/40">{detail}</p>
+      <p className="mt-1.5 truncate font-mono text-[11px] text-parchment/50">{detail}</p>
     </div>
   );
 }

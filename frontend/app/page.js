@@ -143,34 +143,41 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <header className="mb-10 flex items-baseline justify-between border-b hairline pb-6">
+    <main className="mx-auto max-w-5xl px-2 py-8 sm:px-6 sm:py-12">
+      <header className="panel-surface mb-5 flex flex-col gap-5 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="font-display text-2xl text-parchment">FaceChain</h1>
-          <p className="mt-1 text-sm text-parchment/50">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-seal">Content Registry Console</p>
+          <h1 className="mt-1 font-display text-3xl text-parchment">FaceChain</h1>
+          <p className="mt-1 text-sm text-parchment/60">
             Reverse-image search, face match, on-chain content fingerprint
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          <span className="font-mono text-xs text-parchment/30">Ethereum Sepolia · 11155111</span>
+        <div className="flex items-center justify-between gap-4 sm:justify-end">
+          <span className="font-mono text-[11px] text-parchment/45">Ethereum Sepolia · 11155111</span>
           <WalletBar account={account} onConnected={onConnected} onDisconnected={onDisconnected} />
         </div>
       </header>
 
       <StatusBar status={status} account={account} />
 
-      <div className="mt-10 grid grid-cols-1 gap-16 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="mt-5 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
         <div className="space-y-8">
-          <FaceUpload
-            onSubmit={handleSubmit}
-            submitting={submitting}
-            searchConfigured={Boolean(status?.search?.configured)}
-            statusLoaded={Boolean(status?.search)}
-            walletConnected={Boolean(account)}
-          />
+          <section className="panel-surface p-5 sm:p-6">
+            <div className="mb-6 flex items-center justify-between border-b hairline pb-3">
+              <p className="font-display text-lg text-parchment">New verification</p>
+              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-parchment/45">Input required</span>
+            </div>
+            <FaceUpload
+              onSubmit={handleSubmit}
+              submitting={submitting}
+              searchConfigured={Boolean(status?.search?.configured)}
+              statusLoaded={Boolean(status?.search)}
+              walletConnected={Boolean(account)}
+            />
+          </section>
 
           {error && (
-            <div className="rounded border border-signal-bad/40 bg-signal-bad/[0.06] p-4 text-sm text-signal-bad">
+            <div className="rounded-[3px] border border-signal-bad/60 bg-signal-bad/10 p-4 text-sm text-signal-bad">
               {error}
             </div>
           )}
@@ -192,8 +199,8 @@ export default function Home() {
           )}
         </div>
 
-        <aside className="sticky top-16 self-start">
-          <p className="mb-6 font-display text-sm text-parchment/60">Pipeline</p>
+        <aside className="panel-surface sticky top-8 self-start p-5">
+          <p className="mb-6 border-b hairline pb-3 font-display text-lg text-parchment/80">Pipeline</p>
           <Pipeline stages={stages} activeStage={activeStage} error={error} />
         </aside>
       </div>

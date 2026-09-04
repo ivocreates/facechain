@@ -8,7 +8,7 @@ export default function SearchResult({ match, candidates, search }) {
   const others = (candidates || []).filter((c) => c.url !== match.url);
 
   return (
-    <div className="rounded border hairline bg-ink-800/50 p-5">
+    <div className="panel-surface p-5">
       <div className="flex items-center justify-between">
         <p className="font-display text-sm text-parchment/60">Best match</p>
         {search?.provider && (
