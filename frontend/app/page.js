@@ -194,7 +194,11 @@ export default function Home() {
                 fingerprint={result.fingerprint?.hash}
                 canonical={result.fingerprint?.canonicalContent}
               />
-              <VerificationResult verification={result.verification} />
+              <VerificationResult
+                verification={result.verification}
+                blockchain={result.blockchain}
+                fingerprint={result.fingerprint?.hash}
+              />
             </div>
           )}
         </div>
