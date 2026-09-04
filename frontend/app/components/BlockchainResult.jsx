@@ -10,10 +10,13 @@ export default function BlockchainResult({ blockchain, fingerprint, canonical })
   const statusLabel = blockchain.alreadyRegistered ? "already registered" : blockchain.status;
 
   return (
-    <div className="panel-surface p-5">
+    <div className="panel-surface border-goa-gold/70 p-5">
       <div className="flex items-center justify-between">
-        <p className="font-display text-sm text-parchment/60">{label}</p>
-        <span className="rounded-full border border-signal-ok/30 bg-signal-ok/10 px-2 py-0.5 font-mono text-[10px] text-signal-ok">
+        <div>
+          <p className="case-file-label text-goa-gold">Blockchain record</p>
+          <p className="mt-1 font-display text-xl text-parchment">{label}</p>
+        </div>
+        <span className="rounded-full border border-goa-gold/60 bg-goa-gold/10 px-2 py-0.5 font-mono text-[10px] text-goa-gold">
           {statusLabel}
         </span>
       </div>

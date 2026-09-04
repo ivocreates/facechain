@@ -3,7 +3,7 @@
 export default function StatusBar({ status, account }) {
   if (!status) {
     return (
-      <div className="rounded border hairline bg-ink-800/40 px-4 py-3 font-mono text-[11px] text-parchment/40">
+      <div className="panel-surface px-4 py-3 font-mono text-[11px] text-parchment/55">
         Checking backend…
       </div>
     );
@@ -11,7 +11,7 @@ export default function StatusBar({ status, account }) {
 
   if (status.ok === false && !status.search) {
     return (
-      <div className="rounded border border-signal-bad/40 bg-signal-bad/[0.06] px-4 py-3 text-sm text-signal-bad">
+      <div className="rounded-md border border-signal-bad/50 bg-signal-bad/10 px-4 py-3 text-sm text-signal-bad">
         Backend is not reachable at the API base URL. Start it with <span className="font-mono">npm run dev</span> in{" "}
         <span className="font-mono">backend/</span>.
       </div>
@@ -55,7 +55,7 @@ export default function StatusBar({ status, account }) {
 function Pill({ ok, label, detail }) {
   return (
     <div className="panel-surface px-3.5 py-3">
-      <p className="flex items-center gap-2 font-display text-[11px] uppercase tracking-[0.16em] text-parchment/70">
+      <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-parchment/70">
         <span className={ok ? "text-signal-ok" : "text-signal-warn"}>{ok ? "●" : "○"}</span>
         {label}
       </p>

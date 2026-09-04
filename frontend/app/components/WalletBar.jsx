@@ -53,7 +53,7 @@ export default function WalletBar({ account, onConnected, onDisconnected }) {
         <button
           type="button"
           onClick={onDisconnected}
-          className="rounded border hairline px-3 py-1.5 font-mono text-xs text-parchment/80 hover:border-seal/50"
+          className="rounded-md border border-goa-gold/70 bg-goa-gold/10 px-3 py-1.5 font-mono text-xs text-parchment hover:bg-goa-gold/20"
         >
           {short(account)}
         </button>
@@ -62,7 +62,7 @@ export default function WalletBar({ account, onConnected, onDisconnected }) {
           type="button"
           onClick={handleConnect}
           disabled={busy || !installed}
-          className="rounded bg-seal px-3 py-1.5 font-display text-xs text-ink-950 hover:opacity-90 disabled:opacity-30"
+          className="rounded-md border border-goa-gold bg-goa-gold px-3 py-1.5 font-display text-sm font-semibold text-ink-950 hover:bg-parchment disabled:opacity-30"
         >
           {busy ? "Connecting…" : "Connect wallet"}
         </button>

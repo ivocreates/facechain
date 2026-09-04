@@ -8,9 +8,12 @@ export default function SearchResult({ match, candidates, search }) {
   const others = (candidates || []).filter((c) => c.url !== match.url);
 
   return (
-    <div className="panel-surface p-5">
+    <div className="panel-surface border-goa-terracotta/70 p-5">
       <div className="flex items-center justify-between">
-        <p className="font-display text-sm text-parchment/60">Best match</p>
+        <div>
+          <p className="case-file-label text-goa-terracotta">Discovery record</p>
+          <p className="mt-1 font-display text-xl text-parchment">Best match</p>
+        </div>
         {search?.provider && (
           <span className="font-mono text-[10px] text-parchment/35">{search.provider}</span>
         )}
@@ -25,7 +28,7 @@ export default function SearchResult({ match, candidates, search }) {
 
       <div className="mt-3 flex items-end gap-3">
         <span className={"font-display text-4xl " + scoreColor}>{score}%</span>
-        <span className="mb-1 font-mono text-xs text-parchment/40">face similarity</span>
+        <span className="mb-1 font-mono text-xs text-parchment/50">face similarity</span>
       </div>
       <p className="mt-1 font-mono text-[11px] text-parchment/40">{match.matchStatus}</p>
 

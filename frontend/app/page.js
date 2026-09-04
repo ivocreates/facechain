@@ -143,29 +143,32 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto max-w-5xl px-2 py-8 sm:px-6 sm:py-12">
-      <header className="panel-surface mb-5 flex flex-col gap-5 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+    <main className="mx-auto max-w-6xl px-3 py-5 sm:px-6 sm:py-9">
+      <header className="panel-surface mb-4 flex flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-seal">Content Registry Console</p>
-          <h1 className="mt-1 font-display text-3xl text-parchment">FaceChain</h1>
-          <p className="mt-1 text-sm text-parchment/60">
-            Reverse-image search, face match, on-chain content fingerprint
+          <p className="case-file-label text-goa-gold">HH Goa / Investigation Registry</p>
+          <h1 className="mt-1 font-display text-4xl font-semibold text-parchment">FaceChain</h1>
+          <p className="mt-1 text-sm text-parchment/65">
+            Provenance research for visual content, secured on-chain.
           </p>
         </div>
         <div className="flex items-center justify-between gap-4 sm:justify-end">
-          <span className="font-mono text-[11px] text-parchment/45">Ethereum Sepolia · 11155111</span>
+          <span className="font-mono text-[11px] text-seal">Sepolia / 11155111</span>
           <WalletBar account={account} onConnected={onConnected} onDisconnected={onDisconnected} />
         </div>
       </header>
 
       <StatusBar status={status} account={account} />
 
-      <div className="mt-5 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="mt-4 grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-8">
           <section className="panel-surface p-5 sm:p-6">
             <div className="mb-6 flex items-center justify-between border-b hairline pb-3">
-              <p className="font-display text-lg text-parchment">New verification</p>
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-parchment/45">Input required</span>
+              <div>
+                <p className="case-file-label text-goa-teal">Case intake</p>
+                <p className="mt-1 font-display text-2xl text-parchment">Open a verification record</p>
+              </div>
+              <span className="rounded-full border border-goa-teal/60 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-goa-teal">Ready</span>
             </div>
             <FaceUpload
               onSubmit={handleSubmit}
@@ -203,8 +206,9 @@ export default function Home() {
           )}
         </div>
 
-        <aside className="panel-surface sticky top-8 self-start p-5">
-          <p className="mb-6 border-b hairline pb-3 font-display text-lg text-parchment/80">Pipeline</p>
+        <aside className="panel-surface sticky top-5 self-start p-5">
+          <p className="case-file-label text-goa-gold">Chain of custody</p>
+          <p className="mb-6 mt-1 border-b hairline pb-3 font-display text-2xl text-parchment">Pipeline</p>
           <Pipeline stages={stages} activeStage={activeStage} error={error} />
         </aside>
       </div>
