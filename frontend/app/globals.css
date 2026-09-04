@@ -7,13 +7,13 @@
 :root {
   color-scheme: light;
   --bg-base: #f1e9dc;
-  --bg-elevated: #17252a;
+  --bg-elevated: #0b3d25;
   --panel-border: #d9c9ac;
   --panel-soft: #e4d2b0;
-  --text: #342a24;
-  --text-muted: #705f4e;
-  --accent: #287c78;
-  --accent-strong: #c49a55;
+  --text: #241c15;
+  --text-muted: #6b5a45;
+  --accent: #f0c419;
+  --accent-strong: #e4147c;
 }
 
 html {
@@ -27,8 +27,8 @@ body {
 }
 
 ::selection {
-  background: #8b5e3c;
-  color: #f3e4c9;
+  background: #f0c419;
+  color: #0b3d25;
 }
 
 .hairline {
@@ -40,21 +40,30 @@ body {
 }
 
 .panel-surface {
-  background: #17252a;
-  border: 1px solid rgba(228, 210, 176, 0.55);
+  background: #0b3d25;
+  border: 1px solid rgba(240, 196, 25, 0.28);
   border-radius: 6px;
   box-shadow:
-    inset 0 1px 0 rgba(243, 232, 208, 0.14),
-    0 1px 0 rgba(52, 42, 36, 0.22);
+    inset 0 1px 0 rgba(244, 236, 216, 0.1),
+    0 1px 0 rgba(36, 28, 21, 0.22);
+}
+
+.ticket-cta {
+  position: relative;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(11, 61, 37, 0.55) 0 6px, transparent 6px 12px);
+  background-position: top, bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
 }
 
 .archival-certificate {
   position: relative;
   overflow: hidden;
-  border: 1px solid #c49a55;
+  border: 1px solid #f0c419;
   border-radius: 6px;
-  background: #f3e8d0;
-  box-shadow: inset 0 0 0 5px #f3e8d0, inset 0 0 0 6px #c8b791;
+  background: #f4ecd8;
+  box-shadow: inset 0 0 0 5px #f4ecd8, inset 0 0 0 6px #d9c9ac;
   padding: 1.5rem;
 }
 
@@ -64,9 +73,9 @@ body {
   width: 180px;
   height: 180px;
   place-items: center;
-  border: 2px solid #66734a;
+  border: 2px solid #b9860f;
   border-radius: 50%;
-  color: #66734a;
+  color: #0b3d25;
   opacity: 0;
   transform: translateY(-10px) rotate(-7deg) scale(1.08);
 }
@@ -74,7 +83,7 @@ body {
 .archive-stamp::before {
   position: absolute;
   inset: 7px;
-  border: 1px solid #66734a;
+  border: 1px solid #b9860f;
   border-radius: 48% 52% 51% 49%;
   content: "";
 }
@@ -85,7 +94,7 @@ body {
   height: 94px;
   place-content: center;
   justify-items: center;
-  border: 1px solid #66734a;
+  border: 1px solid #0b3d25;
   border-radius: 48% 52% 50% 50%;
   line-height: 1;
 }

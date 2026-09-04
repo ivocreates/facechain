@@ -147,7 +147,7 @@ export default function Home() {
       <header className="panel-surface mb-4 flex flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="case-file-label text-goa-gold">HH Goa / Investigation Registry</p>
-          <h1 className="mt-1 font-display text-4xl font-semibold text-parchment">FaceChain</h1>
+          <h1 className="mt-1 font-display text-4xl font-bold uppercase tracking-tight text-parchment [text-shadow:2px_2px_0_rgba(11,61,37,0.35)]">FaceChain</h1>
           <p className="mt-1 text-sm text-parchment/65">
             Provenance research for visual content, secured on-chain.
           </p>

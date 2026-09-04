@@ -62,7 +62,7 @@ export default function WalletBar({ account, onConnected, onDisconnected }) {
           type="button"
           onClick={handleConnect}
           disabled={busy || !installed}
-          className="rounded-md border border-goa-gold bg-goa-gold px-3 py-1.5 font-display text-sm font-semibold text-ink-950 hover:bg-parchment disabled:opacity-30"
+          className="ticket-cta rounded-md border border-goa-gold bg-goa-gold px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide text-ink-950 hover:bg-parchment disabled:opacity-30"
         >
           {busy ? "Connecting…" : "Connect wallet"}
         </button>

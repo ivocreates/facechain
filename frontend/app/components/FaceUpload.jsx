@@ -90,7 +90,7 @@ export default function FaceUpload({ onSubmit, submitting, searchConfigured, sta
       <button
         type="submit"
         disabled={!canRun}
-        className="w-full rounded-md border border-goa-terracotta bg-goa-terracotta py-3.5 font-display text-base font-semibold text-parchment shadow-[inset_0_1px_0_rgba(243,232,208,0.28)] transition-colors hover:bg-goa-gold hover:text-ink-950 disabled:cursor-not-allowed disabled:opacity-35"
+        className="ticket-cta w-full rounded-md border border-goa-terracotta bg-goa-terracotta py-3.5 font-display text-base font-semibold uppercase tracking-wide text-parchment shadow-[inset_0_1px_0_rgba(244,236,216,0.28)] transition-colors hover:bg-goa-gold hover:text-ink-950 disabled:cursor-not-allowed disabled:opacity-35"
       >
         {submitting ? "Running pipeline…" : "Search, match & register"}
       </button>
