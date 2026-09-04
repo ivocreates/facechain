@@ -6,7 +6,7 @@
 
 :root {
   color-scheme: light;
-  --bg-base: #f1e9dc;
+  --bg-base: #e8eee1;
   --bg-elevated: #0b3d25;
   --panel-border: #d9c9ac;
   --panel-soft: #e4d2b0;
@@ -22,7 +22,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--bg-base);
+  background: radial-gradient(circle at top, rgba(11, 61, 37, 0.08), transparent 55%), var(--bg-base);
   color: var(--text);
 }
 
