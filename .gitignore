@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment / secrets
+.env
+.env.local
+**/.env
+!**/.env.example
+!**/.env.local.example
+
+# Uploaded / temporary images (never commit biometric data)
+backend/uploads/*
+!backend/uploads/.gitkeep
+samples/*
+!samples/.gitkeep
+
+# Face model weights (large binaries — download via `npm run download-models`)
+backend/models/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/*/31337/
+contracts/lib/
+
+# Build / logs
+*.log
+.DS_Store
+dist/
+build/
+
+# Editor
+.vscode/
+.idea/

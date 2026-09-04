@@ -1,0 +1,15 @@
+{
+  "name": "face-chain-verifier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Face identification & blockchain content verification pipeline",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "anvil": "anvil",
+    "setup:local": "bash scripts/setup-local-chain.sh",
+    "deploy:local": "cd contracts && forge script script/Deploy.s.sol:Deploy --rpc-url http://127.0.0.1:8545 --broadcast",
+    "test:contracts": "cd contracts && forge test -vv"
+  }
+}
